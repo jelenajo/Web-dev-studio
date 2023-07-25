@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:wght@100&family=Open+Sans:wght@300;400;600&family=Overpass:wght@100&display=swap');
+/*Basic style*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --font-family: 'Open Sans', sans-serif;
+    --font-size: 16px;
+    --accents:#fba92c;
+    --primary:#141414;
+    --secondary:#9e9f9f;
+    --light-gray:#9e9f9f;
+    --bg:#f2f2f2;
+    --white: #fff;
+    --transition:0.3s linear;
+    --text:#555555;
+    --line-height: 1.6;
+}
+/*basic style*/
+body {
+    line-height: var(--line-height);
+    color: var(--text);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: 300;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+.py {
+    padding: 100px 0;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+.container::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.btn {
+    background: transparent;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.btn-orange {
+    border: 2px solid var(--accents);
+    color: var(--accents);
+    transition: var(--transition);
+}
+.btn-orange:hover {
+    background: var(--accents);
+    color: var(--primary);
+}
+.btn-white {
+   border: 2px solid var(--white);
+   color: var(--white);
+    transition: var(--transition);
+}
+.btn-white:hover {
+    border: 2px solid var(--white);
+    background: var(--white);
+    color: var(--accents);
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header {
+    background-image: url(img/img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: var(--white);
+}
+header nav {
+    background: rgba(0, 0, 0,0.5);
+    padding: 20px 0;
+}
+header a {
+    color: var(--white);
+    text-transform: uppercase;
+    margin: 0 20px;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+
+}
+header a:hover {
+    color: var(--accents);
+}
+
+header hgroup{
+    padding: 250px 0;
+}
+header li {
+    display: inline-block;
+}
+header h1 {
+    background: var(--accents);
+    display: inline-block;
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    padding: 10px 50px;
+    box-shadow: 0 0 50px var(--primary);
+}
+header h1 span {
+    color: var(--primary);
+    font-weight: 800;
+    font-style: italic;
+    
+}
+header h3 {
+    margin: 20px 0;
+    font-size: 2rem;
+    text-shadow: 0 0 3px var(--primary);
+}
+header p {
+    text-shadow: 0 0 3px var(--primary);
+    font-size: 1.3rem;
+}
+/*about*/
+#about {
+    background: var(--bg);
+}
+#about h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+#about .container div {
+    float: left;
+    width: 50%;
+}
+#about .container div:first-child {
+    padding-right:50px ;
+}
+#about .container div:first-child p {
+    font-size: 1.2rem;
+
+}
+#about .container div:last-child {
+    padding-left: 50px;
+}
+#about .container div:last-child p {
+    font-size: 0.9rem;
+}
+/*CTA*/
+.cta {
+    background: var(--accents);
+    text-align: center;
+    color: var(--white);
+}
+.cta p {
+    font-size: 1.3rem;
+}
+/*services*/
+#services h2, #services h4 {
+    text-align: center;
+}
+#services .wrapper {
+    float: left;
+    width: 33%;
+    padding: 10px 30px 30px 60px;
+}
+#services .wrapper::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f121";
+    position: relative;
+    top: 30px;
+    left: -40px;
+    font-size: 1.3rem;
+    color: var(--accents);
+  }
+  /*team*/
+  #team {
+    background: var(--accents);
+    text-align: center;
+    color: var(--white);
+  }
+  #team img {
+    width: 80%;
+    filter: grayscale(100%);
+    border-radius: 50%;
+    border: 6px solid var(--white);
+    margin-top: 30px;
+  }
+  #team .people {
+    float: left;
+    width: 25%;
+  }
+  #team .people h4 {
+    color: var(--primary);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin: 10px 0;
+    letter-spacing: 2px;
+  }
+  #team .people {
+    padding: 0 7px;
+  }
+  /*Footer*/
+  footer {
+    text-align: center;
+    background:var(--primary);
+    color: var(--light-gray);
+  }
+  footer ul li {
+    display: inline-block;
+  }
+  footer h2 {
+    color: var(--white);
+  }
+  footer h2+p {
+    font-size: 1.3rem;
+    margin-bottom: 50px;
+  }
+  footer hr {
+    margin: 30px 0;
+  }
+  footer a {
+    color: var(--accents);
+  }
+  footer a:hover {
+    color: var(--light-gray);
+  }
+  footer i {
+    margin: 0 10px;
+    font-size: 2rem;
+  }
